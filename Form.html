@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1 align ="center"> Application Form</h1>
+        <hr>
+        <br>
+
+        <form>
+            Name:
+            <input type="text" >
+            
+            <br><br>
+            
+            Email:
+            <input type="email" id="email">
+
+            <br><br>
+
+            Password:
+            <input type="password" maxlength="8">
+
+            <br><br>
+
+            Please check all the Emotions that apply to you:
+        
+            <ul>
+            <li>Angry: <input type="checkbox"></li>
+            <li>Sad: <input type="checkbox"></li>
+            <li>Happy: <input type="checkbox"></li>
+            <li>Ambivalent: <input type="checkbox"></li>
+            </ul>
+
+            How Satisfied you wear with our service?
+
+            <ul>
+            <li>Very Satisfied: <input type="radio" name="Emotions"></li>
+            <li>Satisfied: <input type="radio" name="Emotions"></li>
+            <li>Didn't Care: <input type="radio" name="Emotions"></li>
+            <li>Dissatisfied <input type="radio" name="Emotions"></li>
+            <li>Very Dissatisfied <input type="radio" name="Emotions"></li>
+            </ul>
+
+            Further Comments:
+            <textarea name="Comments" rows="3" cols="20"></textarea>
+            <br><br>
+
+            Bio Photo:
+            <input type="file" accept=".jpg , .png">
+            <br><br>
+
+            Location Visited:
+            <select name="Location">
+                <option >Select Location</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Japan">Japan</option>
+                <option value="Africa">Africa</option>
+            </select>
+            <br><br>
+
+            <input type="submit">
+            <input type="reset">
+
+        </form>
+    </body>
+</html>
