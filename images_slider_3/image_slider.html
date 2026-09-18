@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image_Slider</title>
+    </head>
+
+    <body>
+        <h2>Img Slider</h2>
+        <img id="image" src="SS.png">
+        <br><br>
+
+        <button onclick="previous()">Previous</button>
+        <button onclick="next()"> Next </button>
+
+        <Script>
+            let images = ["SS.png", "ORV.png", "LOTM.png"];
+            let i = 0;
+            
+            function next(){
+                i++;
+                if(i == images.length){
+                    i = 0;
+                }
+                document.getElementById("image").src = images[i];
+            }
+
+            function previous()
+            {
+                i--;
+                if(i<0){
+                    i=images.length-1;
+                }
+                document.getElementById("image").src =images[i];
+            }
+
+            setInterval(next, 3000);
+        </Script>
+    </body>
+</html>
