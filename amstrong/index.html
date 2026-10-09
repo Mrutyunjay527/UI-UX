@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    <h1>YOKOSO!!! To Armstrong Checker</h1>
+
+    Enter Your Number: <br><br>
+    <input type="text" id="number" placeholder="Enter a Number">
+    <button onclick="check()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            let num = document.getElementById("number").value;
+
+            if (num === "" || !/^\d+$/.test(num)) {
+                document.getElementById("result").innerHTML =
+                    "Please enter a valid number";
+                return;
+            }
+
+            let sum = 0;
+            let digits = num.split("");
+            let power = digits.length;
+
+            for (let digit of digits) {
+                sum += Number(digit) ** power;
+            }
+
+            if (sum === Number(num)) {
+                document.getElementById("result").innerHTML =
+                    "It is an Armstrong Number";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "It is not an Armstrong Number";
+            }
+        }
+    </script>
+</body>
+</html>
